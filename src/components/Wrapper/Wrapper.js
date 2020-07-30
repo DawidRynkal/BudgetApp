@@ -8,4 +8,4 @@ max-width: 960px;
 padding-left: 10px;
 padding-right: 10px;
 `
-export default Wrapper
+export default Wrapper;
