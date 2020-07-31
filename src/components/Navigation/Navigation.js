@@ -1,7 +1,7 @@
 import React from 'react';
 import { List, Container } from './Navigation.css'
 import { NavigationWrapper } from './Navigation.css'
-import { Link } from 'react-router-dom'
+import Button from '../Button/Button'
 import PropTypes from 'prop-types';
 
 
@@ -14,9 +14,9 @@ function Navigation({ items = [], RightElement }) {
                     {items.map(item => {
                         return (
                             <li key={item.to}>
-                                <Link to={item.to}>
+                                <Button variant="regular" to={item.to}>
                                     {item.content}
-                                </Link>
+                                </Button>
                             </li>
                         )
                     })}

@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import './index.css';
 import GlobalStyle from 'index.css'
-import { Navigation, Wrapper, LoadingIndicator } from 'components'
+import { Navigation, Wrapper, LoadingIndicator, Button } from 'components'
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,7 +9,12 @@ import {
 } from "react-router-dom";
 
 
+
 function App() {
+  //do usunięcia potem
+  function clickHandler() {
+    alert("cycyrycy")
+  }
   return (
     <Suspense fallback={<LoadingIndicator />}>
       <GlobalStyle />
@@ -22,8 +27,8 @@ function App() {
             ]}
           RightElement={(
             <div>
-              <button> pl </button>
-              <button> en  </button>
+              <Button variant="regular" onClick={clickHandler}>pl</Button>
+              <Button variant="regular">en</Button>
             </div>
           )}
         />
