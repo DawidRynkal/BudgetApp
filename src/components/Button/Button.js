@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { InlineButton, RegularButton } from './Button.css'
+import { InlineButton, RegularButton } from './Button.css';
+import PropTypes from 'prop-types';
 
 function Button({ variant, children, ...props }) {
     const { to } = { ...props };
-    const Component = (() => {
+    const Component = useMemo(() => {
         switch (variant) {
             case 'inline':
                 return InlineButton;
@@ -13,18 +14,27 @@ function Button({ variant, children, ...props }) {
             default:
                 return 'regular';
         }
-    })();
+    }, [variant]);
+
+    const component = useMemo(() => (
+        <Component {...props}>
+            {children}
+        </Component>
+    ), [props, children])
 
     return to ? (
         <Link {...props} >
-            <Component {...props}>
-                {children}
-            </Component>
+            {component}
         </Link>
 
-    ) : <Component {...props}>
-            {children}
-        </Component>
+    ) :
+        <>
+            {component}
+        </>
+}
+
+Button.propTypes = {
+    variant: PropTypes.oneOf(['regular', 'inline'])
 }
 
 export default Button;

@@ -14,7 +14,7 @@ function Navigation({ items = [], RightElement }) {
                     {items.map(item => {
                         return (
                             <li key={item.to}>
-                                <Button variant="regular" to={item.to}>
+                                <Button variant="inline" to={item.to}>
                                     {item.content}
                                 </Button>
                             </li>

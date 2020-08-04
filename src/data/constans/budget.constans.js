@@ -1,0 +1,5 @@
+//BUDGET
+export const BUDGET_GET = 'BUDGET_GET';
+export const BUDGET_REQUEST = 'BUDGET_REQUEST';
+export const BUDGET_SUCCESS = 'BUDGET_SUCCESS';
+export const BUDGET_FAILURE = 'BUDGET_FAILURE';
