@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from 'react';
+import React, { Suspense } from 'react';
 import './index.css';
 import GlobalStyle from 'index.css'
 import { Navigation, Wrapper, LoadingIndicator, Button } from 'components'
@@ -7,17 +7,11 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import Budget from './pages/Budget'
 
 
+function App() {
 
-function App({ budget, fetchBudget, fetchBudgetedCategories }) {
-
-  useEffect(() => {
-    fetchBudget(1)
-    fetchBudgetedCategories(1)
-  }, [fetchBudget, fetchBudgetedCategories])
-  console.log(budget)
-  //do usunięcia potem
   function clickHandler() {
     alert("cycyrycy")
   }
@@ -44,8 +38,8 @@ function App({ budget, fetchBudget, fetchBudgetedCategories }) {
               HomePage
           </Route>
             <Route path="/budget">
-              BudgetPage
-          </Route>
+              <Budget />
+            </Route>
           </Switch>
         </Wrapper>
       </Router>
