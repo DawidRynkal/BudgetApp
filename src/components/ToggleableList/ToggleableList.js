@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Item = ({ item, onClickHandler, isActive }) =>
     (
@@ -8,9 +8,14 @@ const Item = ({ item, onClickHandler, isActive }) =>
         </div>)
 
 
-function ToggleableList({ items }) {
+function ToggleableList({ items, clickRef }) {
     const [selectedItem, setSelectedItem] = useState();
-    console.log(selectedItem)
+
+    useEffect(() => {
+        clickRef.current = setSelectedItem;
+    }, [clickRef, setSelectedItem])
+
+
     return (
         <>
             {items.map(item => {
