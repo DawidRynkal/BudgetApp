@@ -1,3 +1,42 @@
+# Budget App
+This project was created to learn a lot of new things about the React library. It is a handy aplication that will allow you to manage your home budget. 
+The aplication is easy to use and intuitive, which can be checked under the link to the demo version:
+## Demo link: 
+
+![budget1](https://user-images.githubusercontent.com/50556211/91734372-28859700-ebab-11ea-9486-7eb8726eb298.png)
+
+# Technologies: 
+- React
+- Redux
+- CSS
+- Styled components
+- JavaScript
+- npm
+- AJAX
+- React hooks
+
+# Setup 
+To run this project, install it locally using npm: 
+```
+$ npm install 
+$ npm start:db
+$ npm start
+```
+
+# Illustrations: 
+
+### Check transacions in a given category
+
+![budget2](https://user-images.githubusercontent.com/50556211/91735791-1a387a80-ebad-11ea-8256-e38762f79b82.png)
+
+![budget3](https://user-images.githubusercontent.com/50556211/91735854-30ded180-ebad-11ea-8f78-e77e5d97b728.png)
+
+### Add new transaction 
+
+![budget5](https://user-images.githubusercontent.com/50556211/91736091-78655d80-ebad-11ea-9745-59fc67d82323.png)
+
+![budget6](https://user-images.githubusercontent.com/50556211/91736098-7b604e00-ebad-11ea-96db-412b5ddfa770.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
