@@ -17,8 +17,8 @@ export const Content = styled.div`
 background: #fff;
 position: absolute;
 margin: auto;
-width: 300px;
-height: 300px;
+width: 350px;
+height: 280px;
 box-shadow:  gray;
 padding: 20px;
 text-align: center;

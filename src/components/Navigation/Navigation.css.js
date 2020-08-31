@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Wrapper from '../Wrapper'
 
 export const Container = styled.div`
-background-color: red;
+background-color: #4b0082;
 display: flex;
 padding: 15px;
 justify-content: space-between;

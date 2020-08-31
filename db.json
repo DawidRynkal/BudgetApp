@@ -160,6 +160,14 @@
       "date": "2020-02-13",
       "budgetId": "1",
       "id": "p1tYW2Q"
+    },
+    {
+      "categoryId": "7",
+      "description": "JavaScript ",
+      "amount": 120,
+      "date": "2020-08-28",
+      "budgetId": "1",
+      "id": "GFeIi03"
     }
   ]
 }

@@ -8,10 +8,12 @@ import AddTransactionForm from './components/AddTransactionForm/AddTransactionFo
 import ShowTransactionDetails from './components/ShowTransactionDetails/ShowTransactionDetails';
 import { Grid } from './Budget.css';
 import { Button, LoadingIndicator, Modal, DetailsModal } from 'components';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, useHistory } from 'react-router-dom';
 
 function Budget({ commonState, budgetState, allCategories, budget, selectedTransactionId,
     fetchBudget, fetchBudgetedCategories, fetchAllCategories, addTransaction }) {
+
+    const history = useHistory();
     useEffect(() => {
         fetchBudgetedCategories(1)
         fetchBudget(1)
@@ -26,7 +28,7 @@ function Budget({ commonState, budgetState, allCategories, budget, selectedTrans
         addTransaction({
             budgetId: budget.id,
             values: values,
-        })
+        }).then(() => history.goBack())
     }
 
 

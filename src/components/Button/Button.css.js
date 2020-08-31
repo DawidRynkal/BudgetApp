@@ -1,29 +1,28 @@
 import styled from 'styled-components';
 
 export const RootButton = styled.button`
-color: black;
+color: #E6E6FA;
 cursor: inherit;
 border: none;
 background-color: transparent;
 cursor: ${props => props.to || props.onClick || props.type === 'submit' ? 'pointer' : 'default'};
 
 &:hover {
-    background: white;
+    background:#E6E6FA;
     color :black;
-    
+    border-radius: 10px;
 }
 `;
 
 export const InlineButton = styled(RootButton)`
 &:hover {
-    text-decoration: underline;
+    
 }
 `
 
 export const RegularButton = styled(RootButton)`
-background: black;
+background: #FF6666;
 color: white;
-margin: 5px;
-padding: 5px;
 border-radius: 3px;
+margin-left: 13px;
 `

@@ -15,5 +15,5 @@ border: 1px solid black;
 
 export const CategoryAmount = styled.div`
 font-weight: 700;
-color: ${({ negative }) => negative ? 'red' : 'green'}
+color: ${({ negative }) => negative ? 'red' : '#00CC00'}
 `;

@@ -12,9 +12,7 @@ import Budget from './pages/Budget'
 
 function App() {
 
-  function clickHandler() {
-    alert("cycyrycy")
-  }
+
   return (
     <Suspense fallback={<LoadingIndicator />}>
       <GlobalStyle />
@@ -27,8 +25,8 @@ function App() {
             ]}
           RightElement={(
             <div>
-              <Button variant="regular" onClick={clickHandler}>pl</Button>
-              <Button variant="regular">en</Button>
+              <Button variant="regular" >pl</Button>
+              {/* <Button variant="regular">en</Button> */}
             </div>
           )}
         />
