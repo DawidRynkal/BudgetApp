@@ -1,7 +1,7 @@
 # Budget App
 This project was created to learn a lot of new things about the React library. It is a handy aplication that will allow you to manage your home budget. 
 The aplication is easy to use and intuitive, which can be checked under the link to the demo version:
-## Demo link: 
+## Demo link: https://dawidrynkal.github.io/BudgetApp/
 
 ![budget1](https://user-images.githubusercontent.com/50556211/91734372-28859700-ebab-11ea-9486-7eb8726eb298.png)
 
