@@ -19,7 +19,7 @@ The aplication is easy to use and intuitive, which can be checked under the link
 To run this project, install it locally using npm: 
 ```
 $ npm install 
-$ npm start:db
+$ npm run start:db
 $ npm start
 ```
 
