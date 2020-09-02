@@ -15,9 +15,9 @@ function Budget({ commonState, budgetState, allCategories, budget, selectedTrans
 
     const history = useHistory();
     useEffect(() => {
-        fetchBudgetedCategories(1)
-        fetchBudget(1)
-        fetchAllCategories()
+        // fetchBudgetedCategories(1)
+        // fetchBudget(1)
+        // fetchAllCategories()
     }, [fetchBudget, fetchBudgetedCategories, fetchAllCategories]);
 
     const isLoaded = useMemo(() => (!!commonState && Object.keys(commonState).length === 0) && (!!budgetState && Object.keys(budgetState).length === 0),
@@ -37,10 +37,10 @@ function Budget({ commonState, budgetState, allCategories, budget, selectedTrans
         <>
             <Grid>
                 <section>
-                    {isLoaded ? <BudgetCategoryList /> : <LoadingIndicator></LoadingIndicator>}
+                    <BudgetCategoryList />
                 </section>
                 <section>
-                    {isLoaded ? <BudgetTransactionList /> : <LoadingIndicator></LoadingIndicator>}
+                    <BudgetTransactionList />
                     <Button to="/budget/transactions/new" variant="regular" >Add new transaction</Button>
                 </section>
             </Grid>

@@ -7,8 +7,18 @@ import CategoryItem from './CategoryItem';
 import 'styled-components/macro';
 import { setSelectedCategoryId } from 'data/actions/budget.acions'
 import { useMemo, useCallback } from 'react';
+import { useQuery } from 'react-query';
+import API from 'data/fetch';
 
-function BudgetCategoryList({ budgetedCategories, allCategories, budget, setSelectedCategoryId }) {
+function BudgetCategoryList({ setSelectedCategoryId }) {
+    const { data: budget } = useQuery('budget', API.budget.fetchBudget);
+    const { data: allCategories } = useQuery('allCategories', API.common.fetchAllCategories);
+    const { data: budgetedCategories } = useQuery(
+        'budgetedCategories',
+        API.budget.fetchBudgetedCategories
+    );
+    console.log(budget)
+
     const budgetedCategoriesByParent = useMemo(
         () => groupBy(
             budgetedCategories, item => allCategories.find(category => category.id === item.categoryId).parentCategory.name),
@@ -126,11 +136,7 @@ function BudgetCategoryList({ budgetedCategories, allCategories, budget, setSele
     )
 }
 
-export default connect(state => ({
-    budgetedCategories: state.budget.budgetedCategories,
-    allCategories: state.common.allCategories,
-    budget: state.budget.budget,
-}),
+export default connect(null,
     {
         setSelectedCategoryId,
     }

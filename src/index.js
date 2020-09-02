@@ -11,7 +11,9 @@ import { ReactQueryConfigProvider } from 'react-query'
 const store = configureStore();
 
 const queryConfig = {
-  suspense: true,
+  shared: {
+    suspense: true,
+  },
 }
 
 ReactDOM.render(
