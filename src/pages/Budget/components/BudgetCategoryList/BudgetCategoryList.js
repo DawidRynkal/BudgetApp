@@ -17,7 +17,7 @@ function BudgetCategoryList({ setSelectedCategoryId }) {
         'budgetedCategories',
         API.budget.fetchBudgetedCategories
     );
-    console.log(budget)
+
 
     const budgetedCategoriesByParent = useMemo(
         () => groupBy(
