@@ -8,8 +8,8 @@ import {
 import API from 'data/fetch'
 
 
-export const fetchBudget = () => {
-    const promise = API.budget.fetchBudget();
+export const fetchBudget = (id) => {
+    const promise = API.budget.fetchBudget(id);
     return {
         type: BUDGET_GET,
         promise,

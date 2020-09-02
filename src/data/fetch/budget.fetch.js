@@ -1,13 +1,13 @@
 
 export const fetchBudget = async () => {
 
-    const response = await fetch('https://my-json-server.typicode.com/dawidrynkal/budgetAppData/budgets/1/?_embed=transactions');
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/budgets/1/?_embed=transactions`);
     const data = await response.json();
     return data;
 }
 
 export const fetchBudgetedCategories = async () => {
-    const response = await fetch('https://my-json-server.typicode.com/dawidrynkal/budgetAppData/budgets/1/budgetCategories');
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/budgets/1/budgetCategories`);
     const data = await response.json();
     return data;
 }
