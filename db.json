@@ -168,6 +168,22 @@
       "date": "2020-08-28",
       "budgetId": "1",
       "id": "GFeIi03"
+    },
+    {
+      "description": "daw",
+      "amount": 12,
+      "categoryId": "3",
+      "date": "2020-09-12",
+      "budgetId": "undefined",
+      "id": "GmykgHD"
+    },
+    {
+      "description": "transaction",
+      "amount": 12,
+      "categoryId": "2",
+      "date": "2020-09-15",
+      "budgetId": "1",
+      "id": "sOo5cUw"
     }
   ]
 }
